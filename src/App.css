@@ -19,7 +19,9 @@
   width: 100%;
 }
 
-
+body{
+  background-color: #f6f6f6;
+}
 .header{
   height: 20%;
   display: flex;
