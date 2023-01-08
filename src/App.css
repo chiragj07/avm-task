@@ -1,38 +1,262 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --black: #2D2D2D;
+  --light-green: #6DD0A5;
+  --blue: #5448C8;
+  --gray: #999999;
+  --background-gray: #ececec;
+  --font-gray: #555555;
+}
+
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.header{
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* .cards-container{
+  display: grid;
+  width: 60%;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  place-items: center;
+  margin-top: 25px;
+} */
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  min-height: 270px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-type1{
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  width: 200px;
+  background-color: var(--background-gray);
+  border-radius: 12px;
+}
+
+.heading{
+  font-family: "Bold";
+  /* font-weight: 700; */
+  font-size: 20px;
+  color:var(--font-gray);
+  align-self: flex-start;
+  margin: 12px;
+
+}
+
+.data-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.rating{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: var(--light-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Extra Bold";
+  color: #ffffff;
+  font-size: 36px;
+}
+
+.changes{
+  width: 60px;
+  height: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+
+.arrow-ratings{
+  font-family: "Extra Bold";
+  font-size: 24px;
+  color: var(--gray);
+}
+
+.change-1, .change-2{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.temp-unit{
+  font-family: "regular";
+  font-size: 12px;
+  text-align: end;
+  align-self: flex-end;
+  margin-bottom: 14px;
+}
+
+.temp-unit-ratings{
+  font-family: "regular";
+  color: var(--gray);
+  align-self: flex-end;
+  margin-bottom: 2px;
+
+}
+.blue{
+  background-color: var(--blue);
+  justify-content: space-evenly;
+}
+.temp{
+  padding: 3px;
+}
+
+.normal-rating{
+  font-family: "Extra Bold";
+  font-size: 56px;
+  color:  var(--blue);
+  height: 60px;
+  width: 70px;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 3px;
+  padding: 0;
+  
+}
+
+.suffix-number{
+  font-family: "Medium";
+  font-size: 16px;
+  margin-left: 2px;
+  margin-bottom: 22px;
+  width: 20%;
+  letter-spacing: 0.5px;
+  font-weight: bolder;
+}
+
+.main-number{
+  align-self: flex-end;
+}
+
+.time{
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: 22px;
+  font-family: "Bold";
+  color: var(--gray);
+
+}
+
+.time-heading{
+  font-size: 12px;
+  font-family: "Regular";
+}
+.time-time{
+  font-size: 24px;
+  color: #707070;
+}
+
+.audio-container{
+  display: flex;
+  width: 90%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* align-items: center; */
+  height: 70px;
+}
+.cards-container > *{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.audio-rating{
+  font-family: "Extra Bold";
+  font-size: 56px;
+  color:  var(--blue);
+  align-self: flex-end;
+  padding-right: 6px;
+}
+.activity{
+  background-color: var(--light-green);
+  align-self: center;
+  color: #ffffff;
+  border-radius:6px;
+  padding-left: 3px;
+  padding-right: 6px;
+  text-align: center;
+  font-size: 12px;
+  align-self: flex-start;
+  margin-top: 8px;
+  letter-spacing: 1.2px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
-.App-link {
-  color: #61dafb;
+.audio-total{
+  align-self: flex-end;
+  margin: 14px;
+  height: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.main-logo{
+  width: 300px;
+}
+
+@media screen and (max-width:1280px) {
+  .cards-container{
+    width: 60%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width:1080px) {
+  .cards-container{
+    width: 70%;
+  }
+}
+
+@media screen and (max-width:920px) {
+  .cards-container{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .cards-container{
+    min-height: 450px;   
+  }
+}
+
+@media screen and (max-width:467px) {
+  .cards-container{
+    min-height: 700px;   
+  }
+
+  .main-logo{
+    width: 200px;
   }
 }

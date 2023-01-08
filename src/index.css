@@ -7,6 +7,35 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: "black";   
+  src: local("Rota-Black"),
+    url("./font/Rota-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bold";  
+  src: local("Rota-Bold"),
+    url("./font/Rota-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Extra Bold";  
+  src: local("Rota-ExtraBold"),
+    url("./font/Rota-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mediam";   
+  src: local("Rota-Mediam"),
+    url("./font/Rota-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Regular";   
+  src: local("Rota-Regular"),
+    url("./font/Rota-Regular.ttf") format("truetype");
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
