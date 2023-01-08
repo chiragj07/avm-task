@@ -98,16 +98,20 @@
   font-family: "Extra Bold";
   font-size: 24px;
   color: var(--gray);
+  margin-left: 3px;
 }
 
 .change-1, .change-2{
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 
 }
 
+.change-2 .arrow-ratings{
+  margin-left: 5px;
+}
 .temp-unit{
   font-family: "regular";
   font-size: 12px;
